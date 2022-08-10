@@ -2,8 +2,8 @@
 @import "_fonts";
 @import "_mixins";
 @import "_nav";
+@import "_table";
 @import "_footer";
-
 
 * {
     padding: 0;
@@ -16,11 +16,9 @@ html {
 }
 
 body {
-
-    background-color: map-get($map:$colores, $key:'black');
+    background-color: map-get($map: $colores, $key: "black");
     background-repeat: repeat;
     overflow-x: hidden;
-
 }
 
 p {
@@ -32,8 +30,6 @@ p {
     color: $white;
     font-size: $textSm;
     text-align: center;
-
-
 }
 
 .pie__icono--p {
@@ -41,7 +37,6 @@ p {
 }
 
 .nav-show {
-
     align-items: flex-start;
 }
 
@@ -71,7 +66,6 @@ section {
         "header"
         "main"
         "footer";
-
 }
 
 .video--grid {
@@ -94,9 +88,7 @@ section {
     grid-area: iframe;
 }
 
-.main__iframe--pos {
-    margin: 20px;
-}
+.main__iframe--pos {}
 
 .horarios {
     color: $white;
@@ -104,19 +96,6 @@ section {
     font-family: $fontMain;
     font-size: 1rem;
     background-color: rgba(0, 0, 0, 0.5);
-}
-
-.table-pos {
-    display: flex;
-    justify-content: space-between;
-    padding: auto;
-    margin: auto;
-}
-
-.table-font {
-    color: $white;
-    font-family: $fontMain;
-    font-size: 1.8em;
 }
 
 .main__articulo__dim {
@@ -130,23 +109,14 @@ section {
     padding: 5px 5px;
     object-position: center;
     margin: 5px 5px;
-
-
 }
 
 .label-text {
-    color: $white;
-    background-color: rgba(0, 0, 0, 0.5);
+    color: map-get($map: $colores, $key: white);
+    text-shadow: 0 0 4px #000000;
     font-family: $fontMain;
     font-size: 1.1rem;
     font-weight: 200;
-}
-
-.img-h {
-    object-fit: cover;
-    object-position: center;
-    overflow: hidden;
-    height: 100vh;
 }
 
 .encabezado__titulos--textcenter {
@@ -174,7 +144,7 @@ section {
 .card-font {
     font-family: $fontSecondary;
     text-align: center;
-    background-color: map-get($map:$colores, $key:'transparent');
+    background-color: map-get($map: $colores, $key: "transparent");
     color: $white;
     font-size: 2rem;
     width: 100%;
@@ -193,8 +163,7 @@ section {
     font-weight: $textBold;
     padding-bottom: 10px;
     text-align: center;
-    color: map-get($map:$colores, $key:'yellow');
-    ;
+    color: map-get($map: $colores, $key: "yellow");
 }
 
 .card-size {
@@ -202,10 +171,10 @@ section {
 }
 
 .card-bg {
-    background-color: map-get($map:$colores, $key:'black');
-    border-color: map-get($map:$colores, $key:'black');
+    background-color: map-get($map: $colores, $key: "black");
+    border-color: map-get($map: $colores, $key: "black");
     border-radius: 5px;
-
+    width: 100wv;
 }
 
 .card-align {
@@ -215,28 +184,28 @@ section {
 
 .card_overlay-title {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    color: map-get($map:$colores, $key:'darkred');
+    color: map-get($map: $colores, $key: "darkred");
     font-family: $fontMain;
     font-size: 2rem;
     font-weight: $textBold;
-
+    padding: auto;
 }
 
 .card_overlay-parrafo {
     display: flex;
     flex-direction: row;
-    color: map-get($map:$colores, $key:'darkred');
-    align-items: center;
-
+    color: map-get($map: $colores, $key: "darkred");
+    justify-content: center;
     font-family: $fontSecondary;
-    font-size: 1rem;
+    font-size: 1.3rem;
     line-height: 30px;
+    padding: auto;
 }
 
 .acc-color {
-    background-color: rgba(16, 14, 14, 0.0);
+    background-color: rgba(16, 14, 14, 0);
     font-family: $fontMain;
     font-size: 1.2rem;
     color: $white;
@@ -244,15 +213,14 @@ section {
 }
 
 .acc-btn {
-    background-color: rgba(16, 14, 14, 0.0);
+    background-color: rgba(16, 14, 14, 0);
 }
 
-
 .acc-h1 {
-    background-color: map-get($map:$colores, $key:'transparent');
+    background-color: map-get($map: $colores, $key: "transparent");
     font-family: $fontSecondary;
-    font-size: 1.8rem;
-    color: #F3EAEA;
+    font-size: 1.2rem;
+    color: #f3eaea;
     text-align: center;
     margin-top: 10px;
 }
@@ -263,10 +231,7 @@ section {
     margin: 10px;
     padding: 10px;
     color: $white;
-
 }
-
-
 
 #section {
     grid-area: section;
@@ -286,41 +251,35 @@ section {
 
 #footer {
     grid-area: footer;
-
 }
 
 @keyframes animacion--main {
     0% {
-        background-image: url(../img/fondo.webp)
+        background-image: url(../img/fondo.webp);
     }
 
     25% {
-        background-image: url(../img/fondo1.webp)
+        background-image: url(../img/fondo1.webp);
     }
 
     50% {
-        background-image: url(../img/fondo2.webp)
+        background-image: url(../img/fondo2.webp);
     }
 
     75% {
-        background-image: url(../img/fondo3.webp)
+        background-image: url(../img/fondo3.webp);
     }
 
     100% {
-        background-image: url(../img/fondo.webp)
+        background-image: url(../img/fondo.webp);
     }
 }
 
 .animacion-main {
-
     animation-name: animacion--main;
     animation-duration: 10s;
     animation-iteration-count: infinite;
-
-
 }
-
-
 
 .pie__icon--sep {
     padding: 10px 5px;
@@ -341,7 +300,6 @@ section {
             "header header"
             "main main"
             "footer footer";
-
     }
 
     .main__articulo__dim {
@@ -350,8 +308,6 @@ section {
     }
 
     .horarios {
-
-
         font-size: 1.5rem;
     }
 
@@ -369,7 +325,7 @@ section {
     }
 
     nav {
-        color: map-get($map:$colores, $key:'white');
+        color: map-get($map: $colores, $key: "white");
         font-size: $textMd;
         padding: 10px;
         width: 100vw;
@@ -384,32 +340,25 @@ section {
     }
 
     .main__parrafo--italic {
-
         font-size: 1.5rem;
-
     }
 
     .encabezado__titulos--textcenter {
         font-size: 3rem;
-
     }
 
     .card_overlay-title {
-
         font-size: 3rem;
         font-weight: $textBold;
-
     }
 
     .card_overlay-parrafo {
-
-
         font-size: 2rem;
-
+        line-height: 40px;
+        padding: auto;
     }
 
     .pie__icono--p {
-
         width: 60px;
     }
 
@@ -432,13 +381,9 @@ section {
             "header header header"
             "main main main"
             "footer footer footer";
-
     }
 
     .horarios {
-
-
-
         font-size: 2rem;
     }
 
@@ -448,8 +393,6 @@ section {
     }
 
     .label-text {
-
-
         font-size: 1.3rem;
         font-weight: 300;
     }
@@ -461,14 +404,12 @@ section {
     }
 
     .video--grid {
-
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
         grid-template-areas:
             "iframe iframe"
             "iframe iframe"
             "iframe iframe";
-        justify-items: center;
     }
 
     nav {
@@ -494,109 +435,49 @@ section {
         padding: auto;
     }
 
+    .acc-h1 {
+        font-size: 2rem;
+    }
+
     .encabezado__titulos--textcenter {
         font-size: 6rem;
         font-weight: 300;
         width: 100%;
-
     }
-
 
     .main__parrafo--italic {
-
         font-size: 2rem;
-
     }
-
 
     .pie__icon--sep {
         width: 100%;
         margin: 0%;
 
         flex-direction: row;
-
     }
 
-
-
-
-
     .card_overlay-title {
-
         font-size: 6rem;
         font-weight: $textBold;
-
     }
 
     .card_overlay-parrafo {
-
         font-size: 4rem;
         font-weight: $textBold;
-
+        line-height: 60px;
+        padding-top: 40px;
     }
 
     .pie__icono--p {
         width: 80px;
     }
-
-
 }
 
-.gallery {
-    display: flex;
-    padding: 2px;
-    transition: .3s;
+.row>div {
+    padding: 0 4px !important;
+}
 
-    &:hover &__image {
-        filter: grayscale(1);
-    }
-
-    &__column {
-        display: flex;
-        flex-direction: column;
-        width: 25%;
-    }
-
-    &__link {
-        margin: 2px;
-        overflow: hidden;
-
-        &:hover {
-            .gallery__image {
-                filter: grayscale(0);
-            }
-
-            .gallery__caption {
-                opacity: 1;
-            }
-        }
-    }
-
-    &__thumb {
-        position: relative;
-    }
-
-    &__image {
-        display: block;
-        width: 100%;
-        transition: .3s;
-
-        &:hover {
-            transform: scale(1.1);
-        }
-    }
-
-    &__caption {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        padding: 25px 15px 15px;
-        width: 100%;
-        font-family: 'Raleway', sans-serif;
-        font-size: 16px;
-        color: map-get($map:$colores, $key:'white');
-        opacity: 0;
-        background: linear-gradient(0deg, rgba(0, 0, 0, .5) 0%, rgba(255, 255, 255, 0) 100%);
-        transition: .3s;
-    }
+img {
+    margin-top: 8px;
+    vertical-align: middle;
 }
